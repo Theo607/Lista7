@@ -1,12 +1,10 @@
 import java.io.*;
 import java.net.*;
 
-public class App {
+public class RunClient {
 
     public static void main(String[] args) throws Exception {
-        Server serv = new Server();
-        serv.start();
-        Thread.sleep(500);
+        
         Socket client = new Socket("localhost", 1234);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
